@@ -8,22 +8,22 @@
 subprojects({
     
     //上传资源配置
-	uploadArchives({
-	     repositories({
-		     mavenDeployer({
+    uploadArchives({
+         repositories({
+             mavenDeployer({
                  //上传资源到Maven私服
-	            repository(url: "http://localhost:8081/repository/maven-releases/",
-	            {
-		            authentication(userName:"admin",password:"admin123")
-		        })
-		        
-		        pom.artifactId ="$project.name"
-		        pom.groupId ="$project.group"
-		     })
-	     })
-	})
+                repository(url: "http://localhost:8081/repository/maven-releases/",
+                {
+                    authentication(userName:"admin",password:"admin123")
+                })
+                
+                pom.artifactId ="$project.name"
+                pom.groupId ="$project.group"
+             })
+         })
+    })
 
-	//定义项目目录结构
+    //定义项目目录结构
     def dirs = [new File("$projectDir/src/main/java"),
                 new File("$projectDir/src/main/resources"),
                 new File("$projectDir/src/test/java"),
@@ -33,13 +33,13 @@ subprojects({
     task('creadirs',{
         dirs.each({
             if(!it.exists())
-   	        {
-            	it.mkdirs()
-            	println("creadirs new $it.path")
+               {
+                it.mkdirs()
+                println("creadirs new $it.path")
             }
             else
             {
-            	println("creadirs exists $it.path")
+                println("creadirs exists $it.path")
             }
         })
     })

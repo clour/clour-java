@@ -8,18 +8,18 @@
 import org.gradle.plugins.ide.eclipse.model.Facet
 
 subprojects({
-	ext({
-	        springBootVar = '1.5.2.RELEASE'
-	        jstWebVersion = '3.1'
-	        embedTomcatVersion = '8.5.11'
-	    })
+    ext({
+            springBootVar = '1.5.2.RELEASE'
+            jstWebVersion = '3.1'
+            embedTomcatVersion = '8.5.11'
+        })
 
-	buildscript({
-		    dependencies({
-		    		        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVar")
-		    		        classpath('org.springframework:springloaded:1.2.7.RELEASE')
-		    		    })
-	    })
+    buildscript({
+            dependencies({
+                            classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVar")
+                            classpath('org.springframework:springloaded:1.2.7.RELEASE')
+                        })
+        })
 
     apply(plugin: 'war')
     apply(plugin: 'eclipse-wtp')
@@ -33,15 +33,15 @@ subprojects({
     
     //Web项目设置
     eclipse({
-	    wtp({
-	        facet({
-	            facet(name: 'jst.java', type: Facet.FacetType.fixed)
-	            facet(name: 'jst.web', type: Facet.FacetType.fixed)
-	            facet(name: 'jst.java', version: javaVersion)
-	            facet(name: 'jst.web', version: jstWebVersion)
-	        })
-	    })
-	})
+        wtp({
+            facet({
+                facet(name: 'jst.java', type: Facet.FacetType.fixed)
+                facet(name: 'jst.web', type: Facet.FacetType.fixed)
+                facet(name: 'jst.java', version: javaVersion)
+                facet(name: 'jst.web', version: jstWebVersion)
+            })
+        })
+    })
 
     //定义项目目录结构
     def dirs = [new File("$projectDir/src/main/java"),
@@ -53,15 +53,15 @@ subprojects({
     //创建项目目录结构
     task('creadirs',{
         dirs.each({
-        	    if(!it.exists())
-   	    	    {
-        	    	it.mkdirs()
-        	    	println("creadirs new $it.path")
-        	    }
-        	    else
-        	    {
-        	    	println("creadirs exists $it.path")
-        	    }
-        	})
+                if(!it.exists())
+                   {
+                    it.mkdirs()
+                    println("creadirs new $it.path")
+                }
+                else
+                {
+                    println("creadirs exists $it.path")
+                }
+            })
     })
 })

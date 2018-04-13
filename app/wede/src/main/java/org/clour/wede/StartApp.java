@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication
 public class StartApp {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		SpringApplication.run(StartApp.class, args);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        SpringApplication.run(StartApp.class, args);
+    }
 
-	@RequestMapping(value = "/", produces = "text/plain;charset=UTF-8")
-	@ResponseBody
-	public String index() {
-		return "Hello Spring Boot!";
-	}
+    @RequestMapping(value = "/", produces = "text/plain;charset=UTF-8")
+    @ResponseBody
+    public String index() {
+        return "Hello Spring Boot!";
+    }
 
-	@RequestMapping("/demo")
-	public String demo() {
-		Demodule.info();
-		return "demo";
-	}
+    @RequestMapping("/demo")
+    public String demo() {
+        Demodule.info();
+        return "demo";
+    }
 }

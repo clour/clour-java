@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @ComponentScan(basePackages = {"org.clour.wede","org.clour.wede.*"})
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
-	@Bean
+    @Bean
     public ViewResolver viewResolver(){
         InternalResourceViewResolver resolver = 
                 new InternalResourceViewResolver();

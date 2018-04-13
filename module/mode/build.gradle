@@ -10,8 +10,8 @@ version('1.0.3')
 //上传资源配置
 uploadArchives({
      repositories({
-	     mavenDeployer({
-	        pom.version ="$project.version"
-	     })
+         mavenDeployer({
+            pom.version ="$project.version"
+         })
      })
 })
