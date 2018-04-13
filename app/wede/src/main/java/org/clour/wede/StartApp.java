@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-//@RestController
+// @RestController
 @SpringBootApplication
 public class StartApp {
 
@@ -17,15 +17,15 @@ public class StartApp {
 		SpringApplication.run(StartApp.class, args);
 	}
 
-	@RequestMapping(value = "/",produces = "text/plain;charset=UTF-8")
+	@RequestMapping(value = "/", produces = "text/plain;charset=UTF-8")
 	@ResponseBody
-    public String index(){
-        return "Hello Spring Boot!";
-    }
-	
+	public String index() {
+		return "Hello Spring Boot!";
+	}
+
 	@RequestMapping("/demo")
-    public String demo(){
+	public String demo() {
 		Demodule.info();
-        return "demo";
-    }
+		return "demo";
+	}
 }
