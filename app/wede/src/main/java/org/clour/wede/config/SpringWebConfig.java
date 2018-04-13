@@ -1,4 +1,4 @@
-package org.clour.wede;
+package org.clour.wede.config;
 
 
 import org.springframework.context.annotation.Bean;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan
+@ComponentScan(basePackages = {"org.clour.wede","org.clour.wede.*"})
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
 	@Bean
     public ViewResolver viewResolver(){

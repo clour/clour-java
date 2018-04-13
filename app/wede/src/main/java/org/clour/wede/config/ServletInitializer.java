@@ -1,4 +1,4 @@
-package org.clour.wede;
+package org.clour.wede.config;
 
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
