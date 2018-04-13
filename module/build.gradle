@@ -33,7 +33,7 @@ subprojects({
     task('creadirs',{
         dirs.each({
             if(!it.exists())
-               {
+            {
                 it.mkdirs()
                 println("creadirs new $it.path")
             }

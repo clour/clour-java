@@ -9,16 +9,16 @@ allprojects({
     version('1.0.1')
 
     ext({
-            javaVersion = '1.8'
-        })
+        javaVersion = '1.8'
+    })
 
     buildscript({
-            repositories({
-                            mavenLocal()
-                            mavenCentral()
-                            jcenter()
-                        })
+        repositories({
+            mavenLocal()
+            mavenCentral()
+            jcenter()
         })
+    })
 
     apply(plugin: 'java')
     apply(plugin: 'eclipse')
