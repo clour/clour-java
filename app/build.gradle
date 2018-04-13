@@ -11,6 +11,7 @@ subprojects({
 	ext({
 	        springBootVar = '1.5.2.RELEASE'
 	        jstWebVersion = '3.1'
+	        embedTomcatVersion = '8.5.11'
 	    })
 
 	buildscript({
@@ -26,6 +27,7 @@ subprojects({
     dependencies({
         // spring boot
         compile("org.springframework.boot:spring-boot-starter-web:$springBootVar")
+        runtime("org.apache.tomcat.embed:tomcat-embed-jasper:$embedTomcatVersion")
         testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVar")
     })
     
