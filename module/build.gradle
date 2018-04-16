@@ -6,7 +6,7 @@
  */
 
 subprojects({
-    
+
     //上传资源配置
     uploadArchives({
          repositories({

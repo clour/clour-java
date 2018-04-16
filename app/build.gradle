@@ -9,15 +9,14 @@ import org.gradle.plugins.ide.eclipse.model.Facet
 
 subprojects({
     ext({
-        springBootVar = '1.5.2.RELEASE'
+        springLoadedVersion = '1.2.8.RELEASE'
         jstWebVersion = '3.1'
-        embedTomcatVersion = '8.5.11'
+        embedTomcatVersion = '9.0.7'
     })
 
     buildscript({
         dependencies({
-            classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVar")
-            classpath('org.springframework:springloaded:1.2.7.RELEASE')
+            classpath("org.springframework:springloaded:$springLoadedVersion")
            })
     })
 
@@ -26,9 +25,7 @@ subprojects({
     
     dependencies({
         // spring boot
-        compile("org.springframework.boot:spring-boot-starter-web:$springBootVar")
         runtime("org.apache.tomcat.embed:tomcat-embed-jasper:$embedTomcatVersion")
-        testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVar")
     })
     
     //Web项目设置
@@ -45,10 +42,12 @@ subprojects({
 
     //定义项目目录结构
     def dirs = [new File("$projectDir/src/main/java"),
-                new File("$projectDir/src/main/resources"),
+                new File("$projectDir/src/main/resources/config"),
+                new File("$projectDir/src/main/resources/static"),
+                new File("$projectDir/src/main/resources/templates"),
                 new File("$projectDir/src/test/java"),
                 new File("$projectDir/src/test/resources"),
-                new File("$projectDir/src/main/webapp/WEB-INF/views")]
+                new File("$projectDir/src/main/webapp/WEB-INF/")]
 
     //创建项目目录结构
     task('creadirs',{

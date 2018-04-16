@@ -5,7 +5,7 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
-version('1.0.3')
+version('1.1.0')
 
 //上传资源配置
 uploadArchives({

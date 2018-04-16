@@ -1,8 +1,10 @@
 package org.clour.wede;
 
 import org.clour.mode.Demodule;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,8 +12,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 // @RestController
 @SpringBootApplication
+@ComponentScan(basePackages = {"org.clour.wede",
+		"org.clour.config",
+	    "org.clour.mode"})
 public class StartApp {
-
+	
+	@Autowired
+	Demodule demodule;
+	
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         SpringApplication.run(StartApp.class, args);
@@ -25,7 +33,7 @@ public class StartApp {
 
     @RequestMapping("/demo")
     public String demo() {
-        Demodule.info();
+    	demodule.info();
         return "demo";
     }
 }

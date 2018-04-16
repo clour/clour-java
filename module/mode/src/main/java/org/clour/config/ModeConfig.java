@@ -1,9 +1,8 @@
-package org.clour.wede.config;
-
+package org.clour.config;
 
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class SpringCoreConfig {
+public class ModeConfig {
 
 }
