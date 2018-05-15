@@ -36,4 +36,10 @@ public class StartApp {
     	demodule.info();
         return "demo";
     }
+    
+    @RequestMapping("/demod")
+    public String demod() {
+    	demodule.info();
+        return "mode/demo";
+    }
 }
