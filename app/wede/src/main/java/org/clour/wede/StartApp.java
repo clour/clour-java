@@ -9,6 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 // @RestController
 @SpringBootApplication
@@ -39,6 +42,10 @@ public class StartApp {
     
     @RequestMapping("/demod")
     public String demod() {
+    	log.debug("debug out...");
+    	log.info("info out...");
+    	log.warn("warn out...");
+    	log.error("error out...");
     	demodule.info();
         return "mode/demo";
     }

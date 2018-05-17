@@ -11,6 +11,7 @@ allprojects({
     ext({
         javaVersion = '1.8'
         springBootVar = '1.5.12.RELEASE'
+        lombokVersion = '1.16.20'
     })
 
     buildscript({
@@ -38,7 +39,7 @@ allprojects({
 
     repositories({
         mavenLocal()
-        maven({url("http://localhost:8081/repository/maven-public/")} )
+        maven({url("http://localhost:8081/repository/maven-public/")})
         mavenCentral()
         jcenter()
     })
@@ -46,6 +47,7 @@ allprojects({
     dependencies({
         // spring boot
         compile("org.springframework.boot:spring-boot-starter-thymeleaf:$springBootVar")
+        compile("org.projectlombok:lombok:$lombokVersion")
         testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVar")
     })
 
