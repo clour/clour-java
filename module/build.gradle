@@ -8,7 +8,7 @@
 subprojects({
 
     //上传资源配置
-    uploadArchives({
+    /*uploadArchives({
          repositories({
              mavenDeployer({
                  //上传资源到Maven私服
@@ -21,7 +21,7 @@ subprojects({
                 pom.groupId ="$project.group"
              })
          })
-    })
+    })*/
 
     //定义项目目录结构
     def dirs = [new File("$projectDir/src/main/java"),

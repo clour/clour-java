@@ -11,6 +11,6 @@ ext({
 
  dependencies({
     // spring boot
-    compile("org.clour:mode:$clourModeVersion")
-    testCompile("org.clour:mode:$clourModeVersion")
+    compile(project(":module:mode"))
+    testCompile(project(":module:mode"))
 })

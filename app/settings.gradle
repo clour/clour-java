@@ -9,3 +9,5 @@
 
 rootProject.name = 'app'
 include 'wede'
+includeFlat 'module'
+include 'module:mode'

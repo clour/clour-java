@@ -15,9 +15,11 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 // @RestController
 @SpringBootApplication
-@ComponentScan(basePackages = {"org.clour.wede",
+@ComponentScan(basePackages = {
+		"org.clour.wede",
 		"org.clour.config",
-	    "org.clour.mode"})
+	    "org.clour.mode"
+		})
 public class StartApp {
 	
 	@Autowired
