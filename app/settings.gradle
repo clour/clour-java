@@ -10,5 +10,6 @@
 rootProject.name = 'app'
 include 'wede'
 include 'clour-eureka'
+include 'clour-confis'
 includeFlat 'module'
 include 'module:mode'

@@ -6,11 +6,13 @@
  */
 
 ext({
+    eurekaVersion = '1.4.4.RELEASE'
     clourModeVersion = '1.+'
 })
 
  dependencies({
     // spring boot
+    compile("org.springframework.cloud:spring-cloud-starter-eureka:$eurekaVersion")
     compile(project(":module:mode"))
     testCompile(project(":module:mode"))
 })

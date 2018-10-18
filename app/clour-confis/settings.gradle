@@ -7,10 +7,4 @@
  * in the user guide at https://docs.gradle.org/4.6/userguide/multi_project_builds.html
  */
 
-rootProject.name = 'clour-java'
-include 'module'
-include 'module:mode'
-include 'app'
-include 'app:wede'
-include 'app:clour-eureka'
-include 'app:clour-confis'
+rootProject.name = 'clour-confis'
