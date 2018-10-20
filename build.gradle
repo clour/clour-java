@@ -10,7 +10,8 @@ allprojects({
 
     ext({
         javaVersion = '1.8'
-        springBootVar = '1.5.12.RELEASE'
+        springBootVar = '1.5.15.RELEASE'
+        springCloudVar = '1.4.4.RELEASE'
         lombokVersion = '1.16.20'
     })
 
@@ -48,6 +49,8 @@ allprojects({
     dependencies({
         // spring boot
         compile("org.springframework.boot:spring-boot-starter-thymeleaf:$springBootVar")
+        compile("org.springframework.boot:spring-boot-starter-freemarker:$springBootVar")
+        compile("org.springframework.cloud:spring-cloud-starter-config:$springCloudVar")
         compile("org.projectlombok:lombok:$lombokVersion")
         testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVar")
     })
