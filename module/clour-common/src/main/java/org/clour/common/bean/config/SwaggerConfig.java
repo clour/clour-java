@@ -1,5 +1,5 @@
 /*
- *    Copyright (c) 2018-2025, lengleng All rights reserved.
+ *    Copyright (c) 2018-2025, clour All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -12,7 +12,7 @@
  * Neither the name of the clour.org developer nor the names of its
  * contributors may be used to endorse or promote products derived from
  * this software without specific prior written permission.
- * Author: lengleng (slorys@hotmail.com)
+ * Author: clour (slorys@hotmail.com)
  */
 
 package org.clour.common.bean.config;
@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author lengleng
+ * @author clour
  * @date 2017/12/28
  * swagger 配置
  */
@@ -67,10 +67,10 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Pig Swagger API ")
-                .description("https://gitee.com/log4j/pig/wikis")
-                .termsOfServiceUrl("https://gitee.com/log4j/pig")
-                .contact(new Contact("冷冷","https://gitee.com/log4j/pig","slorys@hotmail.com"))
+                .title("Clour Swagger API ")
+                .description("https://gitee.com/log4j/clour/wikis")
+                .termsOfServiceUrl("https://gitee.com/log4j/clour")
+                .contact(new Contact("Steven","https://gitee.com/log4j/clour","slorys@hotmail.com"))
                 .version("1.0")
                 .build();
     }

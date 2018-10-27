@@ -1,5 +1,5 @@
 /*
- *    Copyright (c) 2018-2025, lengleng All rights reserved.
+ *    Copyright (c) 2018-2025, clour All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -12,7 +12,7 @@
  * Neither the name of the clour.org developer nor the names of its
  * contributors may be used to endorse or promote products derived from
  * this software without specific prior written permission.
- * Author: lengleng (slorys@hotmail.com)
+ * Author: clour (slorys@hotmail.com)
  */
 
 package org.clour.common.util.template;
@@ -23,11 +23,11 @@ import lombok.ToString;
 import java.io.Serializable;
 
 /**
- * @author lengleng
+ * @author clour
  * @date 2018/1/15
  * 钉钉消息模板
  * msgtype : text
- * text : {"content":"服务: pig-upms-service 状态：UP"}
+ * text : {"content":"服务: clour-rabc-service 状态：UP"}
  */
 @Data
 @ToString
@@ -57,7 +57,7 @@ public class DingTalkMsgTemplate implements Serializable {
 
     public static class TextBean {
         /**
-         * content : 服务: pig-upms-service 状态：UP
+         * content : 服务: clour-rabc-service 状态：UP
          */
 
         private String content;

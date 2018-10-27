@@ -1,5 +1,5 @@
 /*
- *    Copyright (c) 2018-2025, lengleng All rights reserved.
+ *    Copyright (c) 2018-2025, clour All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -12,36 +12,36 @@
  * Neither the name of the clour.org developer nor the names of its
  * contributors may be used to endorse or promote products derived from
  * this software without specific prior written permission.
- * Author: lengleng (slorys@hotmail.com)
+ * Author: clour (slorys@hotmail.com)
  */
 
 package org.clour.common.util.exception;
 
 /**
- * @author lengleng
+ * @author clour
  * @date 2017-12-29 17:05:10
  * 403 授权拒绝
  */
-public class PigDeniedException extends RuntimeException {
+public class ClourDeniedException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    public PigDeniedException() {
+    public ClourDeniedException() {
     }
 
-    public PigDeniedException(String message) {
+    public ClourDeniedException(String message) {
         super(message);
     }
 
-    public PigDeniedException(Throwable cause) {
+    public ClourDeniedException(Throwable cause) {
         super(cause);
     }
 
-    public PigDeniedException(String message, Throwable cause) {
+    public ClourDeniedException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public PigDeniedException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public ClourDeniedException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 

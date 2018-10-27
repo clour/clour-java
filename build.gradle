@@ -8,12 +8,12 @@ allprojects({
     group('org.clour')
     version('1.0.1')
 
-    ext({
-        javaVersion = '1.8'
-        springBootVar = '1.5.15.RELEASE'
-        springCloudVar = '1.4.4.RELEASE'
-        lombokVersion = '1.16.20'
-    })
+//    ext({
+//        javaVersion = '1.8'
+//        springBootVar = '1.5.15.RELEASE'
+//        springCloudVar = '1.4.4.RELEASE'
+//        lombokVersion = '1.16.20'
+//    })
 
     buildscript({
         repositories({
@@ -28,8 +28,8 @@ allprojects({
            })
     })
 
-    apply(plugin: 'java')
-    apply(plugin: 'eclipse')
+    apply(plugin:'java')
+    apply(plugin:'eclipse')
     apply(plugin:'maven')
 
     // JVM 版本号要求

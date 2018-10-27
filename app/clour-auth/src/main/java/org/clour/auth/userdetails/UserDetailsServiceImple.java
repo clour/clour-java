@@ -1,17 +1,22 @@
 package org.clour.auth.userdetails;
 
-import org.springframework.security.core.userdetails.UserDetails;
+import org.clour.auth.feign.UserService;
+import org.clour.common.vo.UserVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("userDetailService")
 public class UserDetailsServiceImple implements UserDetailsService {
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
-		return new UserDetailsImple();
-	}
+	@Autowired
+    private UserService userService;
+
+    @Override
+    public UserDetailsImple loadUserByUsername(String username) throws UsernameNotFoundException {
+        UserVO userVo = userService.findUserByUsername(username);
+        return new UserDetailsImple(userVo);
+    }
 
 }

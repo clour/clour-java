@@ -5,22 +5,7 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
-version('1.0.0')
-
-ext({
-	jjwtVersion='0.9.0'
-	fastjsonVersion='1.2.46'
-	hutoolVersion='3.3.2'
-	commonsioVersion='2.6'
-	jasyptVersion='1.18'
-	mybatisplusVersion='2.1.9'
-	springretryVersion='1.2.2.RELEASE'
-	hibernatevalidatorVersion='5.4.1.Final'
-	feignokhttpVersion='9.5.0'
-	swagger2Version='2.8.0'
-	fastdfsVersion='0.2.0'
-	ttlVersion='2.2.0'
-})
+version('1.0.1')
 
 dependencies({
 	compile("io.jsonwebtoken:jjwt:$jjwtVersion")
@@ -35,8 +20,8 @@ dependencies({
 	compile("org.springframework.boot:spring-boot-starter-aop:$springBootVar")
 	compile("org.hibernate:hibernate-validator:$hibernatevalidatorVersion")
 	compile("io.github.openfeign:feign-okhttp:$feignokhttpVersion")
-	compile("io.springfox:springfox-swagger2:$swagger2Version")
+	compile("io.springfox:springfox-swagger2:$swaggerVersion")
 	compile("com.luhuiguo:fastdfs-spring-boot-starter:$fastdfsVersion")
 	compile("com.alibaba:transmittable-thread-local:$ttlVersion")
-	compile("org.springframework.cloud:spring-cloud-starter-bus-amqp:$springCloudVar")
+	compile("org.springframework.cloud:spring-cloud-starter-bus-amqp:$busamqpVersion")
 })

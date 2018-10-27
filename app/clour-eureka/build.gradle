@@ -5,14 +5,9 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
-ext({
-    eurekaVersion = '1.4.4.RELEASE'
-    securityVersion = '1.2.3.RELEASE'
-})
-
 dependencies({
     // spring boot
-    compile("org.springframework.cloud:spring-cloud-starter-eureka-server:$eurekaVersion")
-    compile("org.springframework.cloud:spring-cloud-starter-security:$securityVersion")
+    compile("org.springframework.cloud:spring-cloud-starter-eureka-server:$springCloudVar")
+    compile("org.springframework.cloud:spring-cloud-starter-security:$clourSecurityVersion")
 })
 

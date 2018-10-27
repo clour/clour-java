@@ -1,5 +1,5 @@
 /*
- *    Copyright (c) 2018-2025, lengleng All rights reserved.
+ *    Copyright (c) 2018-2025, clour All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -12,7 +12,7 @@
  * Neither the name of the clour.org developer nor the names of its
  * contributors may be used to endorse or promote products derived from
  * this software without specific prior written permission.
- * Author: lengleng (slorys@hotmail.com)
+ * Author: clour (slorys@hotmail.com)
  */
 
 package org.clour.common.constant.enums;
@@ -33,7 +33,7 @@ public enum EnumSmsChannelTemplate {
     /**
      * 服务异常提醒
      */
-    SERVICE_STATUS_CHANGE("serviceStatusChange", "Pig4Cloud");
+    SERVICE_STATUS_CHANGE("serviceStatusChange", "Clour4Cloud");
 
 
     /**
