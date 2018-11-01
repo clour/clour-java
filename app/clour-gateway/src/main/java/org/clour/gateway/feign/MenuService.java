@@ -15,21 +15,28 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.common.constant;
+package org.clour.gateway.feign;
+
+import org.clour.common.vo.MenuVO;
+import org.clour.gateway.feign.imple.MenuServiceFallbackImple;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.Set;
 
 /**
  * @author clour
- * @date 2018/1/25
- * 服务名称
+ * @date 2017/10/31
  */
-public interface ServiceNameConstant {
+@FeignClient(name = "pig-rbac-service", fallback = MenuServiceFallbackImple.class)
+public interface MenuService {
     /**
-     * 认证服务的SERVICEID（zuul 配置的对应）
+     * 通过角色名查询菜单
+     *
+     * @param role 角色名称
+     * @return 菜单列表
      */
-    String AUTH_SERVICE = "clour-auth";
-
-    /**
-     * UMPS模块
-     */
-    String RBAC_SERVICE = "clour-rbac-service";
+    @GetMapping(value = "/menu/findMenuByRole/{role}")
+    Set<MenuVO> findMenuByRole(@PathVariable("role") String role);
 }

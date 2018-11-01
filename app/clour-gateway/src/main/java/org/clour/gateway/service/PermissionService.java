@@ -15,21 +15,23 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.common.constant;
+package org.clour.gateway.service;
+
+import org.springframework.security.core.Authentication;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author clour
- * @date 2018/1/25
- * 服务名称
+ * @date 2017/10/28
  */
-public interface ServiceNameConstant {
+public interface PermissionService {
     /**
-     * 认证服务的SERVICEID（zuul 配置的对应）
+     * 判断请求是否有权限
+     *
+     * @param request        HttpServletRequest
+     * @param authentication 认证信息
+     * @return 是否有权限
      */
-    String AUTH_SERVICE = "clour-auth";
-
-    /**
-     * UMPS模块
-     */
-    String RBAC_SERVICE = "clour-rbac-service";
+    boolean hasPermission(HttpServletRequest request, Authentication authentication);
 }

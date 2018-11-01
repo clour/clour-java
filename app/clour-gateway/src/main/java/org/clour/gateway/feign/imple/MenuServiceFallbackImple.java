@@ -15,21 +15,28 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.common.constant;
+package org.clour.gateway.feign.imple;
+
+import org.clour.common.vo.MenuVO;
+import org.clour.gateway.feign.MenuService;
+import com.xiaoleilu.hutool.collection.CollUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+import java.util.Set;
 
 /**
  * @author clour
- * @date 2018/1/25
- * 服务名称
+ * @date 2017/10/31
+ * why add @Service when i up version ?
+ * https://github.com/spring-cloud/spring-cloud-netflix/issues/762
  */
-public interface ServiceNameConstant {
-    /**
-     * 认证服务的SERVICEID（zuul 配置的对应）
-     */
-    String AUTH_SERVICE = "clour-auth";
-
-    /**
-     * UMPS模块
-     */
-    String RBAC_SERVICE = "clour-rbac-service";
+@Slf4j
+@Service
+public class MenuServiceFallbackImple implements MenuService {
+    @Override
+    public Set<MenuVO> findMenuByRole(String role) {
+        log.error("调用{}异常{}","findMenuByRole",role);
+        return CollUtil.newHashSet();
+    }
 }

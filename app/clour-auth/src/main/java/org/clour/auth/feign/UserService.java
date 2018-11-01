@@ -17,7 +17,7 @@
 
 package org.clour.auth.feign;
 
-import org.clour.auth.feign.imple.UserServiceImpl;
+import org.clour.auth.feign.imple.UserServiceImple;
 import org.clour.common.vo.UserVO;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author clour
  * @date 2017/10/31
  */
-@FeignClient(name = "pig-upms-service", fallback = UserServiceImpl.class)
+@FeignClient(name = "pig-upms-service", fallback = UserServiceImple.class)
 public interface UserService {
     /**
      * 通过用户名查询用户、角色信息

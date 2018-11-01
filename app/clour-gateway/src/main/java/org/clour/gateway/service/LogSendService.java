@@ -15,21 +15,19 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.common.constant;
+package org.clour.gateway.service;
+
+import com.netflix.zuul.context.RequestContext;
 
 /**
  * @author clour
- * @date 2018/1/25
- * 服务名称
+ * @date 2017/11/16
  */
-public interface ServiceNameConstant {
+public interface LogSendService {
     /**
-     * 认证服务的SERVICEID（zuul 配置的对应）
+     * 往消息通道发消息
+     *
+     * @param requestContext requestContext
      */
-    String AUTH_SERVICE = "clour-auth";
-
-    /**
-     * UMPS模块
-     */
-    String RBAC_SERVICE = "clour-rbac-service";
+    void send(RequestContext requestContext);
 }

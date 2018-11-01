@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service;
  * 用户服务的fallback
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImple implements UserService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
