@@ -25,7 +25,7 @@ public interface SecurityConstants {
     /**
      * 前缀
      */
-    String PIG_PREFIX = "clour_";
+    String CLOUR_PREFIX = "clour_";
     /**
      * 用户信息头
      */
@@ -38,7 +38,7 @@ public interface SecurityConstants {
     /**
      * 项目的license
      */
-    String PIG_LICENSE = "made by clour";
+    String CLOUR_LICENSE = "made by clour";
     /**
      * 基础角色
      */

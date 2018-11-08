@@ -34,7 +34,7 @@ public class ClourJwtAccessTokenConverter extends JwtAccessTokenConverter {
 	@Override
     public Map<String, ?> convertAccessToken(OAuth2AccessToken token, OAuth2Authentication authentication) {
         Map<String, Object> representation = (Map<String, Object>) super.convertAccessToken(token, authentication);
-        representation.put("license", SecurityConstants.PIG_LICENSE);
+        representation.put("license", SecurityConstants.CLOUR_LICENSE);
         return representation;
     }
 

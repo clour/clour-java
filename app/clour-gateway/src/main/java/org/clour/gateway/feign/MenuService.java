@@ -29,7 +29,7 @@ import java.util.Set;
  * @author clour
  * @date 2017/10/31
  */
-@FeignClient(name = "pig-rbac-service", fallback = MenuServiceFallbackImple.class)
+@FeignClient(name = "clour-rbac-service", fallback = MenuServiceFallbackImple.class)
 public interface MenuService {
     /**
      * 通过角色名查询菜单

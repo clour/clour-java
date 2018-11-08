@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author clour
  * @date 2017/10/31
  */
-@FeignClient(name = "pig-upms-service", fallback = UserServiceImple.class)
+@FeignClient(name = "clour-rbac-service", fallback = UserServiceImple.class)
 public interface UserService {
     /**
      * 通过用户名查询用户、角色信息

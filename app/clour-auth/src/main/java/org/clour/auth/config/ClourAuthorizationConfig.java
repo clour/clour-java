@@ -123,7 +123,7 @@ public class ClourAuthorizationConfig extends AuthorizationServerConfigurerAdapt
     @Bean
     public TokenStore redisTokenStore() {
         RedisTokenStore tokenStore = new RedisTokenStore(redisConnectionFactory);
-        tokenStore.setPrefix(SecurityConstants.PIG_PREFIX);
+        tokenStore.setPrefix(SecurityConstants.CLOUR_PREFIX);
         return tokenStore;
     }
 
@@ -136,7 +136,7 @@ public class ClourAuthorizationConfig extends AuthorizationServerConfigurerAdapt
     public TokenEnhancer tokenEnhancer() {
         return (accessToken, authentication) -> {
             final Map<String, Object> additionalInfo = new HashMap<>(2);
-            additionalInfo.put("license", SecurityConstants.PIG_LICENSE);
+            additionalInfo.put("license", SecurityConstants.CLOUR_LICENSE);
             UserDetailsImple user = (UserDetailsImple) authentication.getUserAuthentication().getPrincipal();
             if (user != null) {
                 additionalInfo.put("userId", user.getUserId());

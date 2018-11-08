@@ -13,6 +13,8 @@ dependencies({
     
     
     compile(project(":module:clour-common"))
+    compile("org.springframework.cloud:spring-cloud-starter-eureka:$springCloudVar")
+    //compile("org.springframework.cloud:spring-cloud-starter-config:$springCloudVar")
     compile("org.springframework.cloud:spring-cloud-starter-oauth2:$cloudOauthVersion")
     compile("org.springframework.cloud:spring-cloud-starter-feign:$springCloudVar")
     compile("org.springframework.boot:spring-boot-starter-freemarker:$springBootVar")
