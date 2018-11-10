@@ -11,8 +11,8 @@ import lombok.Data;
 
 @Data
 @Configuration
-@ConditionalOnExpression("!'${clour.security.ignore}'.isEmpty()")
-@ConfigurationProperties(prefix = "clour.security.ignore")
+@ConditionalOnExpression("!'${ignore}'.isEmpty()")//clour.security.
+@ConfigurationProperties(prefix = "ignore")//clour.security.
 public class ClourFilterIgnorePropertiesConfig {
 	
 	private List<String> urls = new ArrayList<>();

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: clour-rbac-service
+  profiles:
+    active: prd
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: clour-config-server
+        enabled: true
+      profile: ${spring.profiles.active}
+      label: master
+
+#spring:
+#  profiles: prd
+eureka:
+  port: 1025
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://clour:clour123@${eureka.instance.hostname}:${eureka.port}/eureka/

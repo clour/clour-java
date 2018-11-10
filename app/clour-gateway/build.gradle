@@ -9,16 +9,8 @@ dependencies({
     // spring boot
     
     compile(project(":module:clour-common"))
- /*   compile("org.springframework.cloud:spring-cloud-starter-oauth2:$clourOauthVersion")
-    compile("org.springframework.cloud:spring-cloud-starter-feign:$springCloudVar")
-    compile("org.springframework.boot:spring-boot-starter-freemarker:$springBootVar")
-	compile("mysql:mysql-connector-java:$mysqlVersion")
-	compile("org.springframework.boot:spring-boot-starter-jdbc:$springBootVar",{exclude(group:'org.apache.tomcat',module:'tomcat-jdbc')})
-	compile("com.zaxxer:HikariCP:$hikaricpVersion")
-	compile("com.fasterxml.jackson.core:jackson-core:$jacksonVersion")
-	compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
-	compile("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion")*/
 	
+	compile("org.springframework.cloud:spring-cloud-starter-eureka:$springCloudVar")
 	compile("org.springframework.cloud:spring-cloud-starter-zuul:$springCloudVar")
     compile("com.marcosbarbero.cloud:spring-cloud-zuul-ratelimit:$ratelimitVersion")
     compile("org.springframework.cloud:spring-cloud-starter-oauth2:$cloudOauthVersion")
