@@ -15,7 +15,10 @@ public class UserDetailsServiceImple implements UserDetailsService {
 
     @Override
     public UserDetailsImple loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserVO userVo = userService.findUserByUsername(username);
+    	UserVO userVo = userService.findUserByUsername(username);
+        if (userVo == null) {
+            throw new UsernameNotFoundException("用户名不存在或者密码错误");
+        }
         return new UserDetailsImple(userVo);
     }
 

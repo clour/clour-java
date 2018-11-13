@@ -55,7 +55,7 @@ public class AuthUtils {
         }
 
         String token = new String(decoded, CommonConstant.UTF8);
-
+        System.out.println(token);//
         int delim = token.indexOf(":");
 
         if (delim == -1) {
@@ -81,4 +81,18 @@ public class AuthUtils {
 
         return extractAndDecodeHeader(header);
     }
+    
+    public static void main(String[] args) {
+    	try {
+			System.out.println(extractAndDecodeHeader("Basic cGlnOnBpZw=="));
+			String header = "clour:clour";
+			byte[] base64Token = header.getBytes("UTF-8");
+			byte[] coded = Base64.encode(base64Token);
+			String token = new String(coded, CommonConstant.UTF8);
+	        System.out.println(token);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
