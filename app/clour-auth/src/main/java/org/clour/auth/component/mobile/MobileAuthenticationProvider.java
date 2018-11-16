@@ -15,10 +15,10 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.auth.config;
+package org.clour.auth.component.mobile;
 
 import org.clour.auth.feign.UserService;
-import org.clour.auth.userdetails.UserDetailsImple;
+import org.clour.auth.util.UserDetailsImple;
 import org.clour.common.vo.UserVO;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.core.Authentication;

@@ -17,7 +17,7 @@
 
 package org.clour.auth.config;
 
-import org.clour.auth.userdetails.UserDetailsImple;
+import org.clour.auth.util.UserDetailsImple;
 import org.clour.common.constant.CommonConstant;
 import org.clour.common.constant.SecurityConstants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +43,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
 import javax.sql.DataSource;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -58,16 +59,16 @@ import java.util.Map;
 @EnableAuthorizationServer
 public class ClourAuthorizationConfig extends AuthorizationServerConfigurerAdapter {
     @Autowired
-    private DataSource dataSource;
+    protected DataSource dataSource;
 
     @Autowired
-    private AuthenticationManager authenticationManager;
+    protected AuthenticationManager authenticationManager;
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    protected UserDetailsService userDetailsService;
 
     @Autowired
-    private RedisConnectionFactory redisConnectionFactory;
+    protected RedisConnectionFactory redisConnectionFactory;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
@@ -83,7 +84,7 @@ public class ClourAuthorizationConfig extends AuthorizationServerConfigurerAdapt
         TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
         tokenEnhancerChain.setTokenEnhancers(
                 Arrays.asList(tokenEnhancer(), jwtAccessTokenConverter()));
-
+        System.out.println(userDetailsService);
         endpoints
                 .tokenStore(redisTokenStore())
                 .tokenEnhancer(tokenEnhancerChain)

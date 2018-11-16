@@ -15,7 +15,7 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.auth.config;
+package org.clour.auth.component.mobile;
 
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;

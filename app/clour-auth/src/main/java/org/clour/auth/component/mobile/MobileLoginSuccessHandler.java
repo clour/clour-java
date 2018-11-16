@@ -14,7 +14,7 @@
  * this software without specific prior written permission.
  * Author: clour (slorys@hotmail.com)
  */
-package org.clour.auth.config;
+package org.clour.auth.component.mobile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.clour.common.constant.CommonConstant;
@@ -76,7 +76,9 @@ public class MobileLoginSuccessHandler implements AuthenticationSuccessHandler {
             String clientId = tokens[0];
 
             ClientDetails clientDetails = clientDetailsService.loadClientByClientId(clientId);
-
+            
+            log.info("客户端详情：" + clientDetails.toString());
+            
             //校验secret
             if (!clientDetails.getClientSecret().equals(tokens[1])) {
                 throw new InvalidClientException("Given client ID does not match authenticated client");

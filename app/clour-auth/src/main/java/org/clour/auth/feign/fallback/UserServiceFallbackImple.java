@@ -15,7 +15,7 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.auth.feign.imple;
+package org.clour.auth.feign.fallback;
 
 import org.clour.auth.feign.UserService;
 import org.clour.common.vo.UserVO;
@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service;
  * 用户服务的fallback
  */
 @Service
-public class UserServiceImple implements UserService {
+public class UserServiceFallbackImple implements UserService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override

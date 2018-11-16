@@ -15,7 +15,7 @@
  * Author: clour (slorys@hotmail.com)
  */
 
-package org.clour.auth.config;
+package org.clour.auth.component.mobile;
 
 import org.clour.common.constant.SecurityConstants;
 import org.springframework.http.HttpMethod;

@@ -1,10 +1,10 @@
-package org.clour.auth.userdetails;
+package org.clour.auth.util;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.clour.common.constant.CommonConstant;
 import org.clour.common.constant.SecurityConstants;
 import org.clour.common.vo.SysRole;
@@ -14,12 +14,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserDetailsImple implements UserDetails {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 8945778424469799705L;
-
+    private static final long serialVersionUID = 1L;
     private Integer userId;
     private String username;
     private String password;

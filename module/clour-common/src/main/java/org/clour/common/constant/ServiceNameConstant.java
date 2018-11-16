@@ -29,7 +29,7 @@ public interface ServiceNameConstant {
     String AUTH_SERVICE = "clour-auth";
 
     /**
-     * UMPS模块
+     * RBAC模块
      */
     String RBAC_SERVICE = "clour-rbac-service";
 }
