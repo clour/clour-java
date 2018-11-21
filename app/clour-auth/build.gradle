@@ -7,11 +7,6 @@
 
 dependencies({
     // spring boot
-    //compile("org.springframework.cloud:spring-cloud-config-server:$configServerVersion")
-    //compile("org.springframework.cloud:spring-cloud-starter-bus-amqp:$busAmqpVersion")
-    //compile("org.springframework.boot:spring-boot-starter-security:$springBootVar")
-    
-    
     compile(project(":module:clour-common"))
     compile("org.springframework.cloud:spring-cloud-starter-eureka:$springCloudVar")
     compile("org.springframework.cloud:spring-cloud-starter-oauth2:$cloudOauthVersion")

@@ -27,7 +27,6 @@ public class AuthController {
      */
     @GetMapping("/login")
     public ModelAndView login() {
-    	System.out.println("login:login");
         return new ModelAndView("ftl/login");
     }
 

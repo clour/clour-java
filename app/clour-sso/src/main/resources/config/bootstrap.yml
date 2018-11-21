@@ -1,0 +1,41 @@
+server:
+  port: 4040
+  context-path: /sso
+
+#监控短点配置
+management:
+  security:
+    enabled: false
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: false
+
+security:
+  oauth2:
+    client:
+      client-id: clour
+      client-secret: clour
+      user-authorization-uri: http://localhost:3000/oauth/authorize
+      access-token-uri: http://localhost:3000/oauth/token
+      scope: server
+    resource:
+      jwt:
+        key-uri: http://localhost:3000/oauth/token_key
+
+spring:
+  application:
+    name: clour-sso
+  profiles:
+    active: prd
+
+---
+spring:
+  profiles: prd
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://clour:clour123@${eureka.instance.hostname}:${eureka.port}/eureka/

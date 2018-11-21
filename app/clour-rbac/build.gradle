@@ -18,4 +18,3 @@ dependencies({
 	compile("com.github.axet:kaptcha:$kaptchaVersion")
 	compile("org.springframework.cloud:spring-cloud-starter-zipkin:$zipkinVersion")
 })
-
