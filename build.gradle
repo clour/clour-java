@@ -52,7 +52,7 @@ allprojects({
         compile("org.springframework.boot:spring-boot-starter-freemarker:$springBootVar")
         compile("org.springframework.boot:spring-boot-configuration-processor:$springBootVar")
         compile("org.springframework.boot:spring-boot-starter-actuator:$springBootVar")
-        compile("org.springframework.spring-cloud-starter-netflix-eureka-client:$springCloudVar")
+        compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:$springCloudVar")
         compile("org.springframework.cloud:spring-cloud-starter-config:$springCloudVar")
         compile("org.projectlombok:lombok:$lombokVersion")
         testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVar")

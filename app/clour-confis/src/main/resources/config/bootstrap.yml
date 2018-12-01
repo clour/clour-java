@@ -1,0 +1,56 @@
+server:
+  port: 4001
+spring:
+  application:
+    name: clour-config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: D:/Pasic/Resource/Config
+      retry:
+        initial-interval: 3000
+        multiplier: 1.5
+        max-interval: 20000
+        max-attempts: 6
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: clour
+    password: clour123
+  jmx:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+#  context-path: /clour-confis
+endpoints:
+  health:
+    sensitive: false
+
+eureka:
+  port: 1025
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://clour:clour123@${eureka.instance.hostname}:${eureka.port}/eureka/
+
+#server:
+#  port: 8888
+#  servlet:
+#    context-path: /config
+
+# eureka:
+#  instance:
+#    preferIpAddress: true
+#    health-check-url: http://localhost:${server.port}${server.servlet.context-path}/actuator/health
+#    status-page-url: http://localhost:${server.port}${server.servlet.context-path}/actuator/info
+#    home-page-url: http://localhost:${server.port}${server.servlet.context-path}
+#    metadata-map:
+#      configPath: ${server.servlet.context-pat:}
+#      management.context-path: ${server.servlet.context-path}

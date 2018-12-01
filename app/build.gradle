@@ -20,7 +20,8 @@ subprojects({
            })
     })
 
-    apply(plugin: 'war')
+    //apply(plugin: 'war')
+    apply(plugin: 'spring-boot')
     apply(plugin: 'eclipse-wtp')
     
     dependencies({

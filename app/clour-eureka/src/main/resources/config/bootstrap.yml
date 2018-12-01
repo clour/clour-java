@@ -1,0 +1,25 @@
+server:
+  port: 1025
+
+spring:
+  application:
+    name: clour-eureka-server
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: clour
+    password: clour123
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://clour:clour123@${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000

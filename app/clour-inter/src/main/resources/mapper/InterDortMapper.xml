@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~    Copyright (c) 2018-2025, clour All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are met:
+  ~
+  ~ Redistributions of source code must retain the above copyright notice,
+  ~ this list of conditions and the following disclaimer.
+  ~ Redistributions in binary form must reproduce the above copyright
+  ~ notice, this list of conditions and the following disclaimer in the
+  ~ documentation and/or other materials provided with the distribution.
+  ~ Neither the name of the clour.org developer nor the names of its
+  ~ contributors may be used to endorse or promote products derived from
+  ~ this software without specific prior written permission.
+  ~ Author: clour (slorys@hotmail.com)
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.clour.inter.mapper.InterDortMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="org.clour.inter.model.entity.InterDort">
+        <id column="id" property="id"/>
+        <result column="interid" property="interid"/>
+        <result column="inter_coment" property="interComent"/>
+        <result column="inter_modifyuser" property="interModifyuser"/>
+        <result column="inter_modifytime" property="interModifytime"/>
+        <result column="inter_insertuser" property="interInsertuser"/>
+        <result column="inter_inserttime" property="interInserttime"/>
+        <result column="inter_delmark" property="interDelmark"/>
+        <result column="inter_order" property="interOrder"/>
+        <result column="inter_cate" property="interCate"/>
+        <result column="inter_index" property="interIndex"/>
+        <result column="inter_cata" property="interCata"/>
+        <result column="inter_code" property="interCode"/>
+        <result column="inter_name" property="interName"/>
+        <result column="inter_content" property="interContent"/>
+        <result column="inter_soure" property="interSoure"/>
+        <result column="inter_condition" property="interCondition"/>
+        <result column="inter_url" property="interUrl"/>
+        <result column="inter_descript" property="interDescript"/>
+    </resultMap>
+
+</mapper>
