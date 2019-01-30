@@ -21,4 +21,5 @@ dependencies({
 	compile("com.qiniu:qiniu-java-sdk:$qiniuVersion")
 	compile("com.github.axet:kaptcha:$kaptchaVersion")
 	compile("org.springframework.cloud:spring-cloud-starter-zipkin:$zipkinVersion")
+	compile("net.sourceforge.nekohtml:nekohtml:$nekohtmlVersion")
 })
